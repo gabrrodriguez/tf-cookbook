@@ -35,6 +35,10 @@
     + Used to destroy the Terraform managed infrastructure
     + This will ask for confirmation before destroying
 
+<p align="center">
+    <img width="400" alt="image" src="https://github.com/user-attachments/assets/5f96658e-09cc-429e-874f-f8c932203a06">
+</p>
+
 ----------
 
 ## Deploy An EC2 Instance
@@ -72,3 +76,11 @@
     <img width="400" alt="image" src="https://github.com/user-attachments/assets/bd59369d-7756-4e7e-a6d6-654a86c06e8e">
 </p>
 
+#### Terraform Provider Block
+
+> REFERENCE: You can view Terraform Registry and associated providers [here](https://registry.terraform.io/)
+
+<p align="center">
+    <img width="400" alt="image" src="https://github.com/user-attachments/assets/68973e5b-d29d-48ea-b539-8c6df1262b39">
+</p>
+---------
