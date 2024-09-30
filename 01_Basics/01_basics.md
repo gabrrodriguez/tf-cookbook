@@ -83,4 +83,22 @@
 <p align="center">
     <img width="400" alt="image" src="https://github.com/user-attachments/assets/68973e5b-d29d-48ea-b539-8c6df1262b39">
 </p>
+
+
+#### Resource Block 
+
+> *Resouce Type*: Determines the kind of infrastructure object it manages and what arguements and other attributes the resource supports. 
+
+> *Resource Local Name*: It is used to refer to this resource from elsewhere in the same Terraform module, but has no significance outside that modules scope. The resource type and name together serve as an identifier for a given resource and so must be *unique* within a module.
+
+<p align="center">
+    <img width="848" alt="image" src="https://github.com/user-attachments/assets/14e00d63-5b25-42ae-b501-73e618247b05">
+</p>
+
+> Resource Behavior
+
+<p align="center">
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/25563939-165d-4337-be91-a5d30fc0a1bc">
+</p>
+
 ---------
