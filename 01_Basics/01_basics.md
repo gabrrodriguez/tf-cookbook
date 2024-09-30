@@ -39,6 +39,10 @@
     <img width="400" alt="image" src="https://github.com/user-attachments/assets/5f96658e-09cc-429e-874f-f8c932203a06">
 </p>
 
+> To eliminate some of the created files during the `destroy` procedure you can run `terraform plan -destroy`. Then run `rm -rf .terraform* && rm -rf terraform*`
+
+> To run Terraform apply without having to enter the _yes_ prompt from the cli, you can run `terraform apply -auto-approve`
+
 ----------
 
 ## Deploy An EC2 Instance
@@ -92,7 +96,7 @@
 > *Resource Local Name*: It is used to refer to this resource from elsewhere in the same Terraform module, but has no significance outside that modules scope. The resource type and name together serve as an identifier for a given resource and so must be *unique* within a module.
 
 <p align="center">
-    <img width="848" alt="image" src="https://github.com/user-attachments/assets/14e00d63-5b25-42ae-b501-73e618247b05">
+    <img width="400" alt="image" src="https://github.com/user-attachments/assets/14e00d63-5b25-42ae-b501-73e618247b05">
 </p>
 
 > Resource Behavior
@@ -101,4 +105,27 @@
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/25563939-165d-4337-be91-a5d30fc0a1bc">
 </p>
 
+
+> REFERENCE: An *Argument* is an _input_ to the resource block. An *Attribue* is an _output_ that we can utilize as a reference within our TF code. Note that in the TF registry.io documentation in the examples you will see _Arguments_ & _Attributes_ referenced in the documentation. Realize the difference between these 2. 
+
 ---------
+
+## Additional Topics
+
+- [ ] We didn't associate a key/pair with our EC2 instance. 
+> We can do this in `tf` using the Terraform Resource Argument -> `keyName`
+
+- [ ] The AMI name is static, how can we make this dynamic? 
+> We can use the concept of tf `Datasources`
+
+- [ ] We didn't create multiple instances of our EC2 instance. How can we do this? 
+> We can use the _Resource Meta-Argument_: `count` to do this. 
+
+- [ ] We didn't add any variables or parameterizations. Can we do this in tf? 
+> We will do this using the Terraform `Input Variables` concepts
+
+- [ ] We didn't extract any information on terminal about instance information. How can we do this? 
+> We will use the tf `Outputs` concepts to extract instance information and utilize as a reference in other portions of code
+
+- [ ] We didn't see how to create an additional instance after the initial instance was created. Can we create additional resources? 
+> We can create additional resources after the initial resource create using the _Resource Meta-Argument_: `depends_on`
