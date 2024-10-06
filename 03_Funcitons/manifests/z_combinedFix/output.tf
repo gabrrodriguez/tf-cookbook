@@ -42,3 +42,10 @@ output "output_v4_3" {
         az => details.instance_types if length(details.instance_types) !=0 
     })
 }
+
+output "output_v4_4" {
+   value = keys({
+        for az, details in data.aws_ec2_instance_type_offerings.my_instance_type_final: 
+        az => details.instance_types if length(details.instance_types) !=0 
+    })[0]
+}
